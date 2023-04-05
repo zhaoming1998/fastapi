@@ -6,7 +6,7 @@ on: [push, pull_request]
 jobs:
   job1:
     # specifiy what machine to run the progrom
-    runs-on: window-latest
+    runs-on: ubuntu-latest
     steps:
       - name: pulling git repo
         uses: actions/checkout@v3
