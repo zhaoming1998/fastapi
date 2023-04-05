@@ -12,3 +12,12 @@ jobs:
         uses: actions/checkout@v3
       - name: say hi to zhaoming
         run: echo "hello zhaoming"
+      # install python
+      - name: Install python version 3.9
+        uses: actions/checkout@v3
+        with:
+          python-version: '3.9'
+      - name: upgrade pip
+        run: python -m pip install --upgrade pip # commend to upgrade pip
+      - name: install all dependencies
+        run: pip install -r requirements.txt
