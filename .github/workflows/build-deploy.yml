@@ -3,7 +3,7 @@ name: Build and Deploy Code
 # spesify to triger push or pull
 on: [push, pull_request]
 
-job1:
+jobs:
   job1:
     # specifiy what machine to run the progrom
     runs-on: window-latest
