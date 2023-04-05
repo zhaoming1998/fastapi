@@ -13,11 +13,11 @@ def login(user_credential: OAuth2PasswordRequestForm=Depends(), db:Session=Depen
     # check email address
     if not user:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,
-                            detail=f'Email: {user_credential.username} does not exist')
+                            detail='Invalid Credential')
     # check password
     if not utils.verify_psw(user_credential.password, user.password):
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,
-                            detail='Password is not correct')
+                            detail='Invalid Credential')
 
     # create token
     access_token = oauth2.create_access_token(data={'user_id':user.id})

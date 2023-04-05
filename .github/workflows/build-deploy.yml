@@ -1,0 +1,15 @@
+name: Build and Deploy Code
+
+# spesify to triger push or pull
+on: [push, pull]
+
+job1:
+  job1:
+    # specifiy what machine to run the progrom
+    runs-on: window-latest
+    steps:
+      - name: pulling git repo
+        uses: actions/checkout@v3
+      - name: say hi to zhaoming
+        run: echo "hello zhaoming"
+        
