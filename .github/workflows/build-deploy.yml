@@ -1,7 +1,7 @@
 name: Build and Deploy Code
 
 # spesify to triger push or pull
-on: [push, pull]
+on: [push, pull_request]
 
 job1:
   job1:
@@ -12,4 +12,3 @@ job1:
         uses: actions/checkout@v3
       - name: say hi to zhaoming
         run: echo "hello zhaoming"
-        
