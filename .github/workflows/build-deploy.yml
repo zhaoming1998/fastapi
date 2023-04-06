@@ -6,7 +6,7 @@ on: [push, pull_request]
 jobs:
   job1:
     env: # store the secret in Github
-      DATABASE_HOST: ${{secret.DATABASE_HOST}}
+      DATABASE_HOST: ${{secrets.DATABASE_HOST}}
       DATABASE_NAME: fastapi
       DATABASE_PASSWORD: 991230
       DATABASE_PORT: 5432
